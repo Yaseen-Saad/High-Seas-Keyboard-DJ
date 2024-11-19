@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Pirata One', cursive, sans-serif;
+  text-align: center;
+  height: 100vh;
+  background-color: #87CEEB;
+  background-image: url('https://highseas.hackclub.com/bg.svg');
+  background-size: cover;
+  background-position: center;
+  color: #ffff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#app {
+  padding: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #1E90FF, #00008B);
+}
+
+#animations {
+  position: relative;
+  height: 150px;
+}
+
+.ship {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 100px;
+  animation: float 2s infinite ease-in-out;
+}
+
+.quote {
+  background: #d236e2;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+button {
+  background: #4e8ae5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #104E8B;
+}
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: yellow;
+  border-radius: 50%;
+  animation: particle-float 1s ease-out;
+}
+
+@keyframes particle-float {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-50px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.lightning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  animation: flash 0.1s ease-in-out;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: gold;
+  border-radius: 50%;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
